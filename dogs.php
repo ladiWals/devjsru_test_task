@@ -50,16 +50,13 @@ class Dachshund
 	}
 }	
 
-class Plushlabrador 
-{
-
-}
+class Plushlabrador {}
 
 class Rubberdachshund 
 {
 	public function sound() 
 	{
-		echo "woof! woof!";
+		echo "whiiiuu";
 	}
 }
 ?>
