@@ -29,7 +29,9 @@ class Shibainu
 
 	public function hunt()
 	{
-		echo 'Master I caught a ' . $minings[random(0, count($minings))] . ' ';
+		global $minings;
+		echo 'Master I caught a ' . $minings[rand(0, count($minings))] . '<br>';
+		$this->sound();
 	}
 }
 
@@ -42,7 +44,9 @@ class Dachshund
 
 	public function hunt()
 	{
-
+		global $minings;
+		echo 'Master I caught a ' . $minings[rand(0, count($minings))] . '<br>';
+		$this->sound();
 	}
 }	
 
