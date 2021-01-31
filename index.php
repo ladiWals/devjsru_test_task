@@ -1,5 +1,13 @@
 <?php
 	require ('dogs.php');
+	if($_POST) {
+		$explodedPost = explode(' ', $_POST['newCommand']);
+		if(count($explodedPost) === 2) {
+			$breed = $explodedPost[0];
+			$command = $explodedPost[1];
+			$dog = new $breed;
+		} 
+	}
 ?>
 <!DOCTYPE html>
 <head>
@@ -9,17 +17,12 @@
 <body>
 	<div class="main">
 		<form method="POST">
-			<input name="newCommand" size="40" placeholder="Введите команду">
+			<input name="newCommand" size="40" placeholder="dog - command">
 			<br>
 			<input type="submit" name="submit" value="дать команду">
 			<br>	
-			<label>here will be output</label>
+			<label><?=$dog->$command()?></label>
 		</form>
+		<br>
 	</div>
-	<br>
-	<pre>
-		<?php
-			var_dump($_POST);
-		?>
-	</pre>
 </body>

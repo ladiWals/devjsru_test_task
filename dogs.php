@@ -1,5 +1,7 @@
 <?php
 
+$minings = ['duck', 'rabbit', 'cat', 'turkey', 'fox', 'wolf'];
+
 interface sound 
 {
 	public function sound();
@@ -18,24 +20,24 @@ class Mops implements sound
 	}
 }
 
-class ShibaInu 
+class Shibainu 
 {
 	public function sound() 
 	{
-		echo "woof! woof!";
+		echo "gav! gav! gav!";
 	}
 
 	public function hunt()
 	{
-
+		echo 'Master I caught a ' . $minings[random(0, count($minings))] . ' ';
 	}
 }
 
-class dachshund 
+class Dachshund 
 {
 	public function sound() 
 	{
-		echo "woof! woof!";
+		echo "guuuuaaavvvvvvvvvv";
 	}
 
 	public function hunt()
@@ -44,12 +46,12 @@ class dachshund
 	}
 }	
 
-class PlushLabrador 
+class Plushlabrador 
 {
 
 }
 
-class RubberDachshund 
+class Rubberdachshund 
 {
 	public function sound() 
 	{
